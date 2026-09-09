@@ -1,7 +1,7 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Navbar from "../app/components/Navbar";
+import Footer from "../app/components/Footer";
+import FloatingWhatsApp from "../app/components/FloatingWhatsApp";
 
 export const metadata = {
   title: "The Remedy Group | Medical Billing & Revenue Cycle Management",
