@@ -6,7 +6,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 export const metadata = {
   title: "The Remedy Group | Medical Billing & Revenue Cycle Management",
   description:
-    "Professional US medical billing services, CPT/ICD-10 coding, denial management, and accounts receivable recovery led by Muhammad Jawad.",
+    "Professional US medical billing services, CPT/ICD-10 coding, denial management, and accounts receivable recovery led by Jawad.",
 };
 
 export default function RootLayout({ children }) {
