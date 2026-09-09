@@ -16,9 +16,29 @@ export default function ContactPage() {
         notes: "",
     });
 
-    const handleSubmit = (e) => {
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setLoading(true);
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                setSubmitted(true);
+            } else {
+                alert("Something went wrong. Please reach out to us via WhatsApp or Phone directly.");
+            }
+        } catch (err) {
+            alert("Error sending inquiry.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     const whatsappMessage = encodeURIComponent(
