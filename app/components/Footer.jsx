@@ -41,7 +41,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Core Services</h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>Full Revenue Cycle Management</li>
-              <li>ICD-10 & CPT Medical Coding</li>
+              <li>ICD-10 & CPT Medical Billing</li>
               <li>Denial & Rejection Fixation</li>
               <li>Accounts Receivable (A/R) Clean-up</li>
               <li>Eligibility & Benefits Verification</li>
