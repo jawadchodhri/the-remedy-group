@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, Menu, X, ShieldCheck } from "lucide-react";
 
 export default function Navbar() {
@@ -32,9 +33,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#0F4C81] to-[#0284C7] flex items-center justify-center text-white font-bold text-xl shadow-md">
-              TRG
-            </div>
+            <Image
+              src="/logo.png"
+              alt="The Remedy Group Logo"
+              width={48}
+              height={48}
+              className="rounded-lg object-contain"
+              priority
+            />
             <div>
               <span className="text-xl font-black text-[#0A2540] tracking-tight block">The Remedy Group</span>
               <span className="text-xs text-slate-500 font-medium tracking-wide block">Medical Billing & RCM</span>
