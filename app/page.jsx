@@ -11,6 +11,8 @@ import {
   Award,
   Layers,
   HelpCircle,
+  FileSearch,
+  Zap,
 } from "lucide-react";
 
 export default function Home() {
@@ -70,14 +72,26 @@ export default function Home() {
     "EMDs",
   ];
 
-  const steps = [
-    { step: "01", title: "Free Practice Audit", desc: "We review sample claims, denial rates, and aging A/R to pinpoint revenue leaks." },
-    { step: "02", title: "Custom Strategy", desc: "We seamlessly connect to your EHR and establish standard operating protocols." },
-    { step: "03", title: "Execution & Clean Billing", desc: "Daily charge capture, accurate coding, clean submissions, and relentless denial follow-up." },
-    { step: "04", title: "Monthly Growth Reports", desc: "Transparent weekly & monthly analytics showing your increased collections and lower A/R." },
+  const auditSteps = [
+    {
+      title: "1. Share 5 Denied Claims",
+      desc: "Send us 5 sample denied claims or an aging A/R report (redacted for HIPAA).",
+    },
+    {
+      title: "2. Deep Coding & Root-Cause Review",
+      desc: "We analyze CPT/ICD-10 codes, payer remark codes, and timely filing limits.",
+    },
+    {
+      title: "3. Actionable Recovery Blueprint",
+      desc: "Within 48 hours, receive a step-by-step report showing how to recover those funds and stop future denials.",
+    },
   ];
 
   const faqs = [
+    {
+      q: "What is the Free 5-Claim Denial Audit?",
+      a: "It is a 100% complimentary, zero-obligation review. You provide 5 sample rejected or unpaid claims, and we analyze the exact root cause, payer guidelines, and provide a clear recovery strategy.",
+    },
     {
       q: "What EHR / EMR systems do you work with?",
       a: "We have extensive hands-on experience with eClinicalWorks, Kareo/Tebra, NextGen, AdvancedMD, Office Ally, MDLand, and EMDs, and can easily adapt to any other billing software.",
@@ -112,7 +126,7 @@ export default function Home() {
                 href="/contact"
                 className="bg-[#0F4C81] hover:bg-[#0A2540] text-white px-8 py-4 rounded-xl text-base font-bold shadow-lg transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2"
               >
-                Request a Free Billing Audit <ArrowRight className="w-5 h-5" />
+                Claim Free 5-Claim Denial Audit <ArrowRight className="w-5 h-5" />
               </Link>
               <a
                 href="https://wa.me/923224035095"
@@ -127,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Bar */}
+      {/* Trust & Stats Bar */}
       <section className="bg-[#0A2540] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -137,6 +151,41 @@ export default function Home() {
                 <div className="text-xs sm:text-sm text-slate-300 font-medium">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ⭐ NEW: Featured No-Risk 5-Claim Audit Box ⭐ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-[#0F4C81] to-[#0A2540] rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+            <div className="max-w-3xl relative z-10">
+              <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                <Zap className="w-3.5 h-3.5" /> 100% Free • Zero Obligation
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-black mb-4">
+                The Zero-Risk 5-Claim Denial & A/R Audit
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                Not sure why certain claims keep getting rejected? Send us 5 sample denied claims. We will analyze the root cause, identify revenue leakage, and provide a clear recovery plan — completely free of charge.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {auditSteps.map((step, idx) => (
+                  <div key={idx} className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/10">
+                    <h3 className="font-bold text-base text-cyan-300 mb-1">{step.title}</h3>
+                    <p className="text-xs text-slate-300 leading-relaxed">{step.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[#0A2540] font-extrabold px-8 py-3.5 rounded-xl text-sm shadow-lg transition-all hover:scale-105"
+              >
+                Request Your Free 5-Claim Audit <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -207,28 +256,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4-Step Process */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0284C7] bg-blue-100/70 px-3 py-1 rounded-full">
-              Our Process
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] mt-3">How We Optimize Your Revenue</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {steps.map((st, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative">
-                <span className="text-4xl font-black text-slate-200 block mb-2">{st.step}</span>
-                <h3 className="text-lg font-bold text-[#0A2540] mb-2">{st.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{st.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -251,15 +278,15 @@ export default function Home() {
       {/* Final CTA */}
       <section className="bg-gradient-to-r from-[#0A2540] to-[#0F4C81] text-white py-20">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black mb-4">Ready to Maximize Your Practice Collections?</h2>
+          <h2 className="text-3xl sm:text-4xl font-black mb-4">Ready to Recover Stalled Claim Revenue?</h2>
           <p className="text-slate-300 max-w-2xl mx-auto mb-8 text-base">
-            Get in touch today for a free billing health check and discover how much revenue your practice is leaving on the table.
+            Request your free 5-claim denial audit today and discover how much revenue your practice is leaving on the table.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-[#0A2540] font-extrabold px-8 py-4 rounded-xl shadow-lg transition-all hover:scale-105"
           >
-            Claim Your Free Audit Now <ArrowRight className="w-5 h-5" />
+            Claim Free 5-Claim Audit <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
