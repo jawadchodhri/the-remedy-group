@@ -156,32 +156,42 @@ export default function Home() {
       </section>
 
       {/* ⭐ NEW: Featured No-Risk 5-Claim Audit Box ⭐ */}
+      {/* Featured No-Risk 5-Claim Audit Box (Centered) */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-[#0F4C81] to-[#0A2540] rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
-            <div className="max-w-3xl relative z-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="bg-gradient-to-br from-[#0F4C81] to-[#0A2540] rounded-3xl p-8 sm:p-14 text-white shadow-xl relative overflow-hidden text-center">
+            <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
+
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
                 <Zap className="w-3.5 h-3.5" /> 100% Free • Zero Obligation
               </div>
-              <h2 className="text-3xl sm:text-4xl font-black mb-4">
+
+              {/* Title & Description */}
+              <h2 className="text-3xl sm:text-4xl font-black mb-4 tracking-tight">
                 The Zero-Risk 5-Claim Denial & A/R Audit
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-10">
                 Not sure why certain claims keep getting rejected? Send us 5 sample denied claims. We will analyze the root cause, identify revenue leakage, and provide a clear recovery plan — completely free of charge.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {/* 3 Steps Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 w-full text-left">
                 {auditSteps.map((step, idx) => (
-                  <div key={idx} className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/10">
-                    <h3 className="font-bold text-base text-cyan-300 mb-1">{step.title}</h3>
+                  <div
+                    key={idx}
+                    className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col justify-start"
+                  >
+                    <h3 className="font-bold text-base text-cyan-300 mb-2">{step.title}</h3>
                     <p className="text-xs text-slate-300 leading-relaxed">{step.desc}</p>
                   </div>
                 ))}
               </div>
 
+              {/* Centered CTA Button */}
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[#0A2540] font-extrabold px-8 py-3.5 rounded-xl text-sm shadow-lg transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[#0A2540] font-extrabold px-8 py-4 rounded-xl text-sm sm:text-base shadow-lg transition-all hover:scale-105"
               >
                 Request Your Free 5-Claim Audit <ArrowRight className="w-4 h-4" />
               </Link>
