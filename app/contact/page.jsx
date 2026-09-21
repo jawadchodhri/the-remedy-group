@@ -53,7 +53,7 @@ export default function ContactPage() {
           </span>
           <h1 className="text-4xl font-extrabold text-[#0A2540] mt-3">Request Your Free Practice Audit</h1>
           <p className="text-slate-600 mt-2 text-sm">
-            Send us your inquiry or sample denial details. We will analyze the root cause and deliver a recovery report within 48 hours.
+            Send us your inquiry or sample denial details. We will analyze the root cause and deliver a recovery report within 12 hours and immediately if contacted through What's App'.
           </p>
         </div>
 
